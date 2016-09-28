@@ -7,7 +7,7 @@ import time
 from itertools import product
 
 
-sleep = 3
+
 dic_chars = string.digits + string.ascii_letters
 stt = ''
 numm = 1
