@@ -1,0 +1,13 @@
+<a style="-o-link:'javascript:alert(1)';-o-link-source:current">X</a>
+<style>p[foo=bar{}*{-o-link:'javascript:alert(1)'}{}*{-o-link-source:current}*{background:red}]{background:green};</style>
+<link rel=stylesheet href=data:,*%7bx:expression(write(1))%7d
+<style>@import "data:,*%7bx:expression(write(1))%7D";</style>
+<a style="pointer-events:none;position:absolute;"><a style="position:absolute;" onclick="alert(1);">XXX</a></a><a href="javascript:alert(2)">XXX</a>
+<style>*[{}@import'test.css?]{color: green;}</style>X
+* {-o-link:'javascript:alert(1)';-o-link-source: current;}
+<div style="font-family:'foo[a];color:red;';">XXX</div>
+<div style="font-family:foo}color=red;">XXX</div>
+<div style="[a]color[b]:[c]red">XXX</div>
+<div  style="\63&#9\06f&#10\0006c&#12\00006F&#13\R:\000072 Ed;color\0\bla:yellow\0\bla;col\0\00 \&#xA0or:blue;">XXX</div>
+<// style=x:expression\28write(1)\29>
+<style>*{x:ｅｘｐｒｅｓｓｉｏｎ(write(1))}</style>

