@@ -1,3 +1,3 @@
 <?php
-file_get_contents('index.php')
+file_get_contents('en_lang.php')
 ?>
