@@ -1,3 +1,3 @@
 <?php
-system('id')
+file_get_contents('index.php')
 ?>
