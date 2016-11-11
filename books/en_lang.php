@@ -1,3 +1,3 @@
 <?php
-file_get_contents('/etc/passwd');
+echo "BlaBla"; 
 ?>
