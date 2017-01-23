@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <rss version="2.0">
-<!DOCTYPE stay [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+
   <channel>
 
     <title>Bugtraq</title>
@@ -22,7 +22,7 @@
 
     <item>
 
-      <title>%26xxe;</title>
+      <title>xxe</title>
 
       <link>http://seclists.org/bugtraq/2017/Jan/51</link>
 
