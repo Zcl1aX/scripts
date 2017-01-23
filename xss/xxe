@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<!DOCTYPE stay [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+  <channel>
+
+    <title>Bugtraq</title>
+
+    <link>http://seclists.org/#bugtraq</link>
+
+    <atom:link href="http://seclists.org/rss/bugtraq.rss" rel="self" type="application/rss+xml" />
+
+    <language>en-us</language>
+
+    <description>The premier general security mailing list. Vulnerabilities are often announced here first, so check frequently!</description>
+
+    <pubDate>Mon, 23 Jan 2017 11:15:04 GMT</pubDate>
+
+    <lastBuildDate>Mon, 23 Jan 2017 11:15:04 GMT</lastBuildDate>
+
+    <!-- MHonArc v2.6.19 -->
+
+    <item>
+
+      <title>%26xxe</title>
+
+      <link>http://seclists.org/bugtraq/2017/Jan/51</link>
+
+      <description>&lt;p&gt;Posted by Filippo Cavallarin on Jan 23&lt;/p&gt;Advisory ID:           SGMA16-004&lt;br&gt;
+
+        Title:                 Microsoft Remote Desktop Client for Mac Remote Code Execution&lt;br&gt;
+
+        Product:               Microsoft Remote Desktop Client for Mac&lt;br&gt;
+
+        Version:               8.0.36 and probably prior&lt;br&gt;
+
+        Vendor:                www.microsoft.com&lt;br&gt;
+
+        Type:                  Arbitrary file read/write (leads to RCE)&lt;br&gt;
+
+        Risk level:            4 / 5&lt;br&gt;
+
+        Credit:                filippo.cavallarin () wearesegment com&lt;br&gt;
+
+        CVE:...&lt;br&gt;</description>
+
+      <pubDate>Mon, 23 Jan 2017 11:09:08 GMT</pubDate>
+
+      <guid isPermaLink="true">http://seclists.org/bugtraq/2017/Jan/51</guid>
+
+    </item>
+    
+    <!-- MHonArc v2.6.19 -->
+
+  </channel>
+
+</rss>
