@@ -7,7 +7,7 @@
 
     <title>Bugtraq</title>
 
-    <link>http://seclists.org/#bugtraq</link>
+    <link>http://bla.org/#bugbla</link>
     
     <language>en-us</language>
 
@@ -21,7 +21,7 @@
 
     <item>
 
-      <title>&xxe;</title>
+      <title>%26xxe;</title>
 
       <link>http://seclists.org/bugtraq/2017/Jan/51</link>
 
