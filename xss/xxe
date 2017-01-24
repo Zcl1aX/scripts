@@ -8,9 +8,7 @@
     <title>Bugtraq</title>
 
     <link>http://seclists.org/#bugtraq</link>
-
-    <atom:link href="http://seclists.org/rss/bugtraq.rss" rel="self" type="application/rss+xml" />
-
+    
     <language>en-us</language>
 
     <description>xxe1</description>
@@ -23,7 +21,7 @@
 
     <item>
 
-      <title>&xxe;</title>
+      <title>xxe</title>
 
       <link>http://seclists.org/bugtraq/2017/Jan/51</link>
 
