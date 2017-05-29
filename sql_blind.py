@@ -1,10 +1,13 @@
-import requests
 import os
 import string
 import sys
 import collections
 import time
-
+import socks
+import socket
+socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 9050)
+socket.socket = socks.socksocket
+import requests
 
 spec_ = '!@#$%&*?^.,-+='
 dic_ = string.digits + string.ascii_letters
