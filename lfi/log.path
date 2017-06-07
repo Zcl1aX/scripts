@@ -17,8 +17,8 @@
 /var/www/logs/access.log
 /var/www/logs/error.log
 C:\apache\logs\access.log
-C:\Program    Files\Apache    Group\Apache\logs\access.log
-C:\program    files\wamp\apache2\logs
+C:\ProgramFiles\ApacheGroup\Apache\logs\access.log
+C:\programfiles\wamp\apache2\logs
 C:\wamp\logs
 C:\xampp\apache\logs\error.log
 /opt/lampp/logs/error_log
@@ -36,7 +36,7 @@ C:\xampp\apache\logs\error.log
 /var/www/logs/access_log
 /var/www/logs/error_log
 C:\apache\logs\error.log
-C:\Program    Files\Apache    Group\Apache\logs\error.log
+C:\ProgramFiles\ApacheGroup\Apache\logs\error.log
 C:\wamp\apache2\logs
 C:\xampp\apache\logs\access.log
 proc/self/enviro
