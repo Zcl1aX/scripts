@@ -1,5 +1,8 @@
 Kali Linux
 
+    Uniq
+    cat rockyou.txt |  awk '!($0 in a) {a[$0];print}' > uniqrockyou.txt
+ 
     Set the Target IP Address to the $ip system variable
     export ip=192.168.1.100
 
